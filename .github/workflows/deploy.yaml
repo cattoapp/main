@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  API_KEY: ${{ secrets.config }}
+  API_KEY: ${{ secrets.CONFIG }}
 
 jobs:
   deploy:
