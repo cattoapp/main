@@ -2,16 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebas
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
 import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
-const firebaseConfig = {
-		apiKey: "AIzaSyCXvg8FDZ7u_I6ZQ9eVc_OS3MS6Ol4JkDI",
-		authDomain: "catto-chat-app.firebaseapp.com",
-		databaseURL: "https://catto-chat-app-default-rtdb.firebaseio.com",
-		projectId: "catto-chat-app",
-		storageBucket: "catto-chat-app.appspot.com",
-		messagingSenderId: "279959835948",
-		appId: "1:279959835948:web:64e15839cb38c2133d4889",
-		measurementId: "G-JKMR0V7D1N"
-};
+const firebaseConfig = ${{ env.CONFIG }};
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
