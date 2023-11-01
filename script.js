@@ -3,7 +3,7 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase
 import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 
-const firebaseConfig = ${{ secrets.CONFIG }};
+const firebaseConfig = JSON.parse(process.env.CONFIG);
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
